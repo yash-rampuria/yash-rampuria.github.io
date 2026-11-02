@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yash Rampuria | Robotics, Perception &amp; Robot Learning · Stanford</title>
+  <meta name="description" content="Yash Rampuria: MS Robotics at Stanford (AeroAstro), researcher at the Stanford Autonomous Systems Lab. Creator of GGraph, a GPU-accelerated graph library for robot deployment and learning. Previously Skydio, Honda R&amp;D, Amazon, and CTO of IIT Bombay Racing Driverless." />
+  <meta name="author" content="Yash Rampuria" />
+  <link rel="canonical" href="https://yash-rampuria.github.io/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Yash Rampuria | Robotics, Perception &amp; Robot Learning" />
+  <meta property="og:description" content="Stanford MS Robotics. GPU navigation graphs, perception for autonomy, and robot learning." />
+  <meta property="og:url" content="https://yash-rampuria.github.io/" />
+  <meta property="og:image" content="https://yash-rampuria.github.io/assets/images/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yash Rampuria",
+    "url": "https://yash-rampuria.github.io",
+    "email": "yashr@stanford.edu",
+    "jobTitle": "Graduate Researcher, Robotics",
+    "affiliation": {
+      "@type": "EducationalOrganization",
+      "name": "Stanford University",
+      "department": "Department of Aeronautics and Astronautics"
+    },
+    "alumniOf": [
+      { "@type": "EducationalOrganization", "name": "Stanford University", "description": "MS Aeronautics & Astronautics (Robotics), GPA 4.0, 2025–2027" },
+      { "@type": "EducationalOrganization", "name": "Indian Institute of Technology Bombay", "description": "B.Tech (Honors) Mechanical Engineering, GPA 9.63/10, 2021–2025" }
+    ],
+    "knowsAbout": ["Robotics", "Robot Learning", "Reinforcement Learning", "Computer Vision", "SLAM", "Sensor Fusion", "Navigation Graphs", "GPU Computing", "Autonomous Driving", "Sim-to-Real"],
+    "sameAs": [
+      "https://www.linkedin.com/in/yash-rampuria-5ba350226/",
+      "https://scholar.google.com/citations?user=dksJWnEAAAAJ&hl=en",
+      "https://github.com/yash-rampuria"
+    ]
+  }
+  </script>
+
+  <script>
+    // Apply the saved or system theme before first paint to avoid a flash.
+    (function () {
+      var saved = localStorage.getItem('theme');
+      var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      document.documentElement.classList.add('js');
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Navigation -->
+  <header id="navbar">
+    <nav class="nav container" aria-label="Primary">
+      <a href="#top" class="brand" aria-label="Yash Rampuria, back to top">
+        <span class="brand-mark" aria-hidden="true">YR</span>
+        <span class="brand-name">Yash Rampuria</span>
+        <span class="brand-sep" aria-hidden="true"></span>
+        <span class="brand-lab">Stanford ASL</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#research">Research</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#background">Background</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Toggle dark mode">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+        </button>
+        <button class="icon-btn nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section id="top" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="hero-eyebrow">
+            <img src="assets/images/headshot.jpg" alt="" class="hero-avatar" width="36" height="36" onerror="this.remove()" />
+            <span class="pulse-dot" aria-hidden="true"></span>
+            MS Robotics &middot; Stanford University
+          </p>
+          <h1 class="hero-name">Yash Rampuria</h1>
+          <p class="hero-role">Perception, mapping <em>&amp;</em> robot learning</p>
+          <p class="hero-lead">
+            I build the systems that let robots see, map and learn at scale: GPU navigation graphs that train
+            a thousand robots at once, perception stacks for autonomous race cars, and vision models that
+            cross the sim-to-real gap.
+          </p>
+
+          <dl class="hero-facts">
+            <div><dt>Now</dt><dd>MS Aeronautics &amp; Astronautics, Stanford &middot; GPA 4.0</dd></div>
+            <div><dt>Research</dt><dd>Autonomous Systems Lab &middot; Prof. Marco Pavone</dd></div>
+            <div><dt>Before</dt><dd>Skydio &middot; Honda R&amp;D &middot; Amazon &middot; IIT Bombay Racing</dd></div>
+          </dl>
+
+          <div class="hero-cta">
+            <a href="#research" class="btn btn-primary">
+              Explore GGraph
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+            </a>
+            <a href="Yash_Rampuria_Resume.pdf" class="btn btn-ghost" target="_blank" rel="noopener" data-resume>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>
+              Resume
+            </a>
+            <a href="https://scholar.google.com/citations?user=dksJWnEAAAAJ&amp;hl=en" class="btn btn-ghost" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 9L12 4 2 9l10 5 10-5z"/><path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
+              Scholar
+            </a>
+            <a href="https://www.linkedin.com/in/yash-rampuria-5ba350226/" class="btn btn-ghost" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <figure class="hero-visual" aria-label="Animated illustration of a robot exploring while it builds a navigation graph">
+          <div class="viz-card">
+            <div class="viz-bar">
+              <span class="viz-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="viz-title">frontier exploration on a navigation graph</span>
+            </div>
+            <canvas id="graph-canvas" aria-hidden="true"></canvas>
+            <div class="viz-stats" aria-hidden="true">
+              <span><b id="stat-nodes">0</b> nodes</span>
+              <span><b id="stat-frontier">0</b> frontiers</span>
+              <span><b id="stat-explored">0%</b> explored</span>
+            </div>
+          </div>
+          <figcaption>Illustration: a robot grows its navigation graph as it observes the world and always heads for the nearest <span class="frontier-swatch">frontier</span>.</figcaption>
+        </figure>
+      </div>
+
+      <div class="container">
+        <ul class="stat-band" aria-label="Highlights">
+          <li><span class="stat-value">62<small>ms</small></span><span class="stat-label">to update a 1M-node navigation graph on the GPU</span></li>
+          <li><span class="stat-value">27<small>&times;</small></span><span class="stat-label">faster environment stepping for graph-based RL</span></li>
+          <li><span class="stat-value">4<small>th</small></span><span class="stat-label">overall at Formula Student AI 2025, UK</span></li>
+          <li><span class="stat-value">4.0</span><span class="stat-label">GPA, MS Robotics at Stanford</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section id="research" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker">Research</p>
+          <h2 class="section-title">One graph library for <em>deploying</em> robots and <em>training</em> them</h2>
+          <p class="section-sub">
+            At Stanford's Autonomous Systems Lab with Prof. Marco Pavone, I work on spatial representations that are
+            fast enough for large-scale robot learning and robust enough to run on a real robot.
+          </p>
+        </header>
+
+        <article class="feature reveal">
+          <div class="feature-media">
+            <img src="assets/images/ggraph-isaac.jpg" alt="Hundreds of quadruped robots in Isaac Sim, each building its own colored navigation graph of red nodes and edges" loading="lazy" width="1600" height="680" />
+            <span class="media-tag">200 robots training in parallel in Isaac Sim</span>
+          </div>
+          <div class="feature-body">
+            <div class="badge-row">
+              <span class="badge badge-accent">arXiv 2026</span>
+              <span class="badge">Submitted to ICRA 2027</span>
+              <span class="badge">First author</span>
+            </div>
+            <h3 class="feature-title">GGraph: A GPU-Accelerated Library for Graph-Based Robot Deployment and Learning</h3>
+            <p class="authors"><strong>Yash Rampuria</strong>, Rohan Garg, Daniele Gammelli, Marco Pavone</p>
+            <p>
+              Navigation graphs underpin both classical exploration planners and a growing class of RL policies,
+              but RL needs hundreds of parallel environments, each growing its own graph, and CPU graph builders
+              cap training at a few dozen. <strong>GGraph</strong> stores each graph as parallel GPU tensors with stable
+              node identities, so sampling, merging, pruning, shortest paths, frontiers and loop-closure correction
+              are all single vectorized operations. The same code runs one robot over ROS&nbsp;2 or a thousand robots in simulation.
+            </p>
+            <ul class="checklist">
+              <li>Batched graph builder: one nearest-neighbor merge and one line-of-sight kernel per step, with graph search as edge-parallel Bellman&ndash;Ford</li>
+              <li>Layer system for frontier, semantic and learned per-node attributes</li>
+              <li>PPO graph-attention exploration policies trained in about 1.5&nbsp;h, deployed zero-shot on a Boston Dynamics Spot</li>
+            </ul>
+            <div class="link-row">
+              <a class="link-pill" href="https://arxiv.org/pdf/2610.28953" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V9z"/><path d="M14 3v6h6"/></svg>Paper
+              </a>
+              <a class="link-pill" href="https://arxiv.org/abs/2610.28953" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg>arXiv 2610.28953
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <ul class="metric-grid reveal" aria-label="GGraph results">
+          <li><span class="metric">62 ms</span><span class="metric-label">full graph update at one million nodes, enough to cover a 500&nbsp;&times;&nbsp;500&nbsp;m area</span></li>
+          <li><span class="metric">~120&times;</span><span class="metric-label">faster than a SWAGGER + NetworkX baseline (about 7&nbsp;ms at 100k nodes)</span></li>
+          <li><span class="metric">27&times;</span><span class="metric-label">env-step throughput vs. ARiADNE: ~6,500 vs. 244 steps/s with 512 robots</span></li>
+          <li><span class="metric">24 h &rarr; 1.5 h</span><span class="metric-label">wall-clock training to match prior learned exploration policies</span></li>
+          <li><span class="metric">2.26 ms</span><span class="metric-label">to correct a whole drifted graph after loop closure, in one vectorized pass</span></li>
+          <li><span class="metric">157 m</span><span class="metric-label">explored on a real office floor by Spot, zero-shot from a sim-trained policy</span></li>
+        </ul>
+
+        <div class="gallery reveal">
+          <figure class="gallery-item">
+            <img src="assets/images/ggraph-campus.jpg" alt="A 3-D navigation graph of red nodes built over a point cloud of a university campus, with an inset of the graph projected into the camera view" loading="lazy" width="1400" height="788" />
+            <figcaption>A 3-D navigation graph built from real campus data captured on a Spot with an Odin LiDAR-camera.</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/images/ggraph-world.jpg" alt="Isaac Sim training worlds arranged in the shape of the letters G G, with robots and their colored graphs on each tile" loading="lazy" width="1200" height="723" />
+            <figcaption>Isaac Sim training worlds laid out as the GGraph logo, each robot growing its own graph.</figcaption>
+          </figure>
+          <figure class="gallery-item gallery-wide">
+            <img src="assets/images/ggraph-spot.jpg" alt="Top-down point cloud of an office corridor with the Spot robot's colored exploration trajectory" loading="lazy" width="1600" height="356" />
+            <figcaption>The simulation-trained PPO policy exploring a real office floor on Spot using onboard cameras only.</figcaption>
+          </figure>
+          <figure class="gallery-item gallery-wide">
+            <img src="assets/images/ggraph-forest.jpg" alt="Five exploration trajectories in a forest map comparing ARiADNE, TARE, and GGraph-trained SAC and PPO policies" loading="lazy" width="1800" height="416" />
+            <figcaption>Exploring a 150&nbsp;&times;&nbsp;150&nbsp;m forest: GGraph's PPO policy, trained for 1.5&nbsp;h, drives the shortest path (1040&nbsp;m) against ARiADNE and TARE.</figcaption>
+          </figure>
+        </div>
+
+        <div class="interests reveal">
+          <p class="mini-label">Research interests</p>
+          <ul class="chip-row">
+            <li>Robot learning</li>
+            <li>Graph-based planning &amp; exploration</li>
+            <li>GPU-parallel simulation</li>
+            <li>State estimation &amp; SLAM</li>
+            <li>Multi-sensor fusion</li>
+            <li>Sim-to-real transfer</li>
+            <li>Perception for autonomy</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker">Selected work</p>
+          <h2 class="section-title">Projects</h2>
+          <p class="section-sub">Learning-based navigation, estimation and full autonomy stacks, from course research at Stanford to racing in the UK.</p>
+        </header>
+
+        <article class="case reveal">
+          <div class="case-media">
+            <img src="assets/images/vlead.jpg" alt="V-LEAD overview: a quadrotor rollout to a mannequin goal, the RGB-to-velocity architecture, and policy-versus-expert 3-D trajectories for three targets" loading="lazy" width="1400" height="788" />
+          </div>
+          <div class="case-body">
+            <p class="case-meta"><span>Visuomotor policy &middot; RL</span><span>Stanford CS231N &middot; Jun 2026</span></p>
+            <h3 class="case-title">V-LEAD: Vision-Only Drone Navigation in Gaussian Splats</h3>
+            <p>
+              Goal-conditioned, map-free quadrotor navigation from a single forward RGB camera. We distill a privileged
+              MPC expert into a compact policy: ResNet-18 fused with a Depth Anything V2 branch by cross-attention, a GRU
+              for temporal context, and a 10-step velocity-command horizon. It is trained by behavior cloning, refined with
+              MPC-oracle DAgger, and fine-tuned with SAC in closed loop inside the FiGS 3D Gaussian Splatting simulator.
+            </p>
+            <p class="my-part"><span>My part</span> GRU/MLP tensor contract, BC and smoothness losses, validation metrics, and SAC design and training.</p>
+            <div class="outcome">
+              <div><b>14&ndash;52% &rarr; 97%</b><span>goal success vs. RGB-only BC</span></div>
+              <div><b>33% &rarr; 5%</b><span>collision rate</span></div>
+            </div>
+            <ul class="tag-row"><li>PyTorch</li><li>3D Gaussian Splatting</li><li>Depth Anything V2</li><li>DAgger</li><li>SAC</li><li>MPC</li></ul>
+            <div class="link-row">
+              <a class="link-pill" href="https://github.com/kothari1/V-LEAD" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 00-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 015.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0012 .5z"/></svg>Code
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="case case-flip reveal">
+          <div class="case-media">
+            <img src="assets/images/mavbe.jpg" alt="Five pedestrians crossing a CARLA city street, each tracked with a colored bounding box and persistent ID" loading="lazy" width="865" height="651" />
+          </div>
+          <div class="case-body">
+            <p class="case-meta"><span>Multi-object tracking &middot; Estimation</span><span>Stanford AA273 &middot; Mar 2026</span></p>
+            <h3 class="case-title">MAVBE: Behavior-Aware Multi-Object Tracking</h3>
+            <p>
+              Pedestrian tracking for urban driving that goes beyond constant-velocity Kalman filters. An Interacting
+              Multiple Model filter blends constant-velocity, coordinated-turn and constant-acceleration models, with a
+              social-force term injected into the prediction step. It runs fully in 3-D world coordinates from RGB-D
+              unprojection, inside a DeepSORT pipeline with a tunable appearance-versus-motion cost &lambda;.
+            </p>
+            <p class="my-part"><span>My part</span> RGB-D perception pipeline (YOLOv9 + OSNet + DeepSORT), the &lambda;-weighted association cost, gating and Q/R noise tuning, IMM correction from pure 3-D estimates, and CARLA scenarios.</p>
+            <div class="outcome">
+              <div><b>&minus;55% RMSE</b><span>0.50&nbsp;m vs. 1.10&nbsp;m at 5 pedestrians</span></div>
+              <div><b>&minus;68% ID switches</b><span>9.8 vs. 30.2 against a vanilla KF</span></div>
+            </div>
+            <ul class="tag-row"><li>IMM-EKF</li><li>Social force</li><li>DeepSORT</li><li>YOLOv9</li><li>CARLA</li><li>Python</li></ul>
+            <div class="link-row">
+              <a class="link-pill" href="https://github.com/rayanam2021/MAVBE" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 00-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 015.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0012 .5z"/></svg>Code
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="case reveal">
+          <div class="case-media case-media-dark">
+            <img src="assets/images/iitb-racing.svg" alt="Illustration of an autonomous race car following a planned path through a track lined with blue and yellow cones, with LiDAR rings and cone detections" loading="lazy" width="1200" height="720" />
+          </div>
+          <div class="case-body">
+            <p class="case-meta"><span>Full-stack autonomy &middot; Perception</span><span>IIT Bombay Racing &middot; 2022&ndash;2025</span></p>
+            <h3 class="case-title">IIT Bombay Racing Driverless: Autonomous Racing Stack</h3>
+            <p>
+              As CTO for Autonomous Systems &amp; Perception, I led the Level-4 driverless division of a 100+ student team
+              representing India at Formula Student AI in the UK. The stack covers perception, SLAM, path planning and
+              control on an NVIDIA Jetson AGX Orin with two ZED2i stereo cameras, a Velodyne VLP-16 LiDAR and an SBG Ellipse-N GNSS/INS.
+            </p>
+            <ul class="checklist">
+              <li>LiDAR &ndash; mono/stereo camera &ndash; IMU fusion that stays robust to edge cases and sensor failure</li>
+              <li>A depth-estimation network for LiDAR-based vision with 22% higher accuracy</li>
+              <li>Cone detection latency cut from 100&nbsp;ms to 7&nbsp;ms with a C++ TensorRT engine for YOLOv11</li>
+            </ul>
+            <div class="outcome">
+              <div><b>4th overall</b><span>FS-AI 2025, 3rd in Business Plan</span></div>
+              <div><b>Only Asian team</b><span>to complete all 10 laps at FS-AI 2025</span></div>
+            </div>
+            <ul class="tag-row"><li>ROS</li><li>C++</li><li>TensorRT</li><li>Sensor fusion</li><li>SLAM</li><li>LiDAR</li></ul>
+            <div class="link-row">
+              <a class="link-pill" href="https://arxiv.org/abs/2408.06113" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V9z"/><path d="M14 3v6h6"/></svg>Paper
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <div class="more-projects reveal">
+          <p class="mini-label">More from IIT Bombay</p>
+          <div class="mini-grid">
+            <article class="mini-card">
+              <p class="mini-meta">Undergraduate thesis &middot; 2023&ndash;2025</p>
+              <h3>Aerial Manipulation with Drones</h3>
+              <p>An autonomous quadcopter with an under-actuated linked manipulator on ArduPilot. PID force control through position control reached under 2% steady-state error and under 5&nbsp;s settling time.</p>
+              <p class="mini-foot">INDUS Lab &middot; Prof. Vivek Sangwan</p>
+            </article>
+            <article class="mini-card">
+              <p class="mini-meta">Course project &middot; 2024</p>
+              <h3>Guidance &amp; Control of Fixed-Wing UAVs</h3>
+              <p>A 6-DOF Simulink model of a Cessna with wind disturbances and actuator saturation, RRT and Voronoi path planning, and an autopilot holding airspeed, altitude and attitude within 3% under 20% disturbances.</p>
+              <p class="mini-foot">Aerospace Engg. &middot; Prof. Shashi Ranjan Kumar</p>
+            </article>
+            <article class="mini-card">
+              <p class="mini-meta">R&amp;D project &middot; 2023&ndash;2024</p>
+              <h3>Deep Learning for Nuclei Segmentation</h3>
+              <p>A segmentation model that combines Vision Transformers and U-Net. Fine-tuning on 47k+ nuclei reached 0.91 recall, with results comparable to the state of the art on PanNuke.</p>
+              <p class="mini-foot">MeDAL Lab &middot; Prof. Amit Sethi</p>
+            </article>
+            <article class="mini-card">
+              <p class="mini-meta">Hackathon &middot; 2023</p>
+              <h3>Edge-AI Shelf Monitoring</h3>
+              <p>Live camera monitoring of supermarket shelves with YOLOv5 on edge hardware to flag misplaced products. Won 1st prize (INR 60k) at the AI-IoT Hackathon of the Indo-Japan Industry Summit.</p>
+              <p class="mini-foot">AWL &middot; NEDO Japan &middot; IITB Research Park</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker">Experience</p>
+          <h2 class="section-title">Where I've built things</h2>
+        </header>
+
+        <ol class="ledger">
+          <li class="ledger-item reveal">
+            <div class="ledger-side">
+              <span class="org-mark" aria-hidden="true">S</span>
+              <span class="ledger-date">Jun &ndash; Sep 2026</span>
+            </div>
+            <div class="ledger-main">
+              <h3>Autonomy Engineer, Computer Vision <span class="at">@ Skydio</span></h3>
+              <p class="ledger-summary">Low-latency pose estimation and sim-to-real transfer for fixed-wing autonomous drones.</p>
+              <ul>
+                <li>Built a purely sim-trained feature-point extractor with sub-pixel keypoint accuracy and under 5&nbsp;cm real-world pose error.</li>
+                <li>Used feature-level domain adaptation, CycleGANs and conditional diffusion models to improve out-of-distribution generalization.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="ledger-item reveal">
+            <div class="ledger-side">
+              <span class="org-mark" aria-hidden="true">A</span>
+              <span class="ledger-date">Jul &ndash; Sep 2026</span>
+            </div>
+            <div class="ledger-main">
+              <h3>Research Assistant <span class="at">@ Stanford Autonomous Systems Lab</span></h3>
+              <p class="ledger-summary">Built GGraph with Prof. Marco Pavone. Submitted to ICRA 2027.</p>
+              <ul>
+                <li>Built a GPU-resident navigation-graph library for tensorized world representations that updates a 1M-node graph in 62&nbsp;ms.</li>
+                <li>Reached 27&times; the throughput of CPU graph builders by batching up to 1,024 robots, cutting RL training from 24&nbsp;h to about 2&nbsp;h.</li>
+                <li>Trained PPO graph-attention exploration policies that beat baselines by 6% in path length at 97% successful coverage.</li>
+                <li>Deployed the sim-trained policy zero-shot on a Boston Dynamics Spot, with 2&nbsp;ms vectorized loop-closure correction.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="ledger-item reveal">
+            <div class="ledger-side">
+              <span class="org-mark" aria-hidden="true">H</span>
+              <span class="ledger-date">Jun &ndash; Aug 2025</span>
+            </div>
+            <div class="ledger-main">
+              <h3>Computer Vision Researcher, Self-Driving <span class="at">@ Honda R&amp;D</span></h3>
+              <p class="ledger-summary">LiDAR-based SLAM for autonomous cars. Received a full-time offer.</p>
+              <ul>
+                <li>Developed a point-to-point, IMU-aided ICP fusion pipeline for terrain height mapping in feature-poor environments.</li>
+                <li>Reduced ICP misalignment by over 80% by tuning frequency, using IMU priors, ground removal and clustering.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="ledger-item reveal">
+            <div class="ledger-side">
+              <span class="org-mark" aria-hidden="true">R</span>
+              <span class="ledger-date">Mar 2022 &ndash; Jul 2025</span>
+            </div>
+            <div class="ledger-main">
+              <h3>CTO, Autonomous Systems &amp; Perception <span class="at">@ IIT Bombay Racing Driverless</span></h3>
+              <p class="ledger-summary">Led the L4 autonomous racing division of a 100+ student team representing India at Formula Student AI, UK.</p>
+              <ul>
+                <li>Placed 4th overall and 3rd in Business Plan, and was the only Asian team to run all 10 laps at FS-AI 2025.</li>
+                <li>Built a LiDAR &ndash; mono/stereo camera &ndash; IMU fusion system robust to edge cases and sensor failure.</li>
+                <li>Cut object detection latency from 100&nbsp;ms to 7&nbsp;ms with a C++ TensorRT engine for YOLOv11.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="ledger-item reveal">
+            <div class="ledger-side">
+              <span class="org-mark" aria-hidden="true">a</span>
+              <span class="ledger-date">May &ndash; Jul 2024</span>
+            </div>
+            <div class="ledger-main">
+              <h3>Software Development Engineer Intern <span class="at">@ Amazon</span></h3>
+              <p class="ledger-summary">Improved and automated testing for mid-mile transportation accounting. Received a full-time offer.</p>
+              <ul>
+                <li>Implemented a regression testing framework for transport accounting with Java, JSON configurations and TestNG.</li>
+                <li>Shipped 8+ approved code reviews that automated test-data generation and cut integration-testing latency.</li>
+                <li>Worked with AWS SQS/SNS and DynamoDB, and presented an SOP for 16+ pipeline dataflows to senior engineers.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="ledger-item reveal">
+            <div class="ledger-side">
+              <span class="org-mark" aria-hidden="true">X</span>
+              <span class="ledger-date">May &ndash; Jul 2023</span>
+            </div>
+            <div class="ledger-main">
+              <h3>Machine Learning Intern <span class="at">@ AxisRooms</span></h3>
+              <p class="ledger-summary">Time-series models for hotel occupancy prediction.</p>
+              <ul>
+                <li>Built a forecasting model with 30% lower MAPE after benchmarking XGBoost, SARIMA and LSTMs, and received a letter of recommendation.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker">Publications</p>
+          <h2 class="section-title">Papers</h2>
+        </header>
+
+        <ol class="pubs">
+          <li class="pub reveal">
+            <span class="pub-year">2026</span>
+            <div class="pub-main">
+              <h3>GGraph: A GPU-Accelerated Library for Graph-Based Robot Deployment and Learning</h3>
+              <p class="authors"><strong>Yash Rampuria</strong>, Rohan Garg, Daniele Gammelli, Marco Pavone</p>
+              <p class="pub-venue">arXiv preprint arXiv:2610.28953 &middot; Submitted to ICRA 2027</p>
+              <div class="link-row">
+                <a class="link-pill" href="https://arxiv.org/pdf/2610.28953" target="_blank" rel="noopener">PDF</a>
+                <a class="link-pill" href="https://arxiv.org/abs/2610.28953" target="_blank" rel="noopener">arXiv</a>
+              </div>
+            </div>
+          </li>
+          <li class="pub reveal">
+            <span class="pub-year">2024</span>
+            <div class="pub-main">
+              <h3>IIT Bombay Racing Driverless: Autonomous Driving Stack for Formula Student AI</h3>
+              <p class="authors"><strong>Yash Rampuria</strong>, Deep Boliya, Shreyash Gupta, Gopalan Iyengar, Ayush Rohilla, Mohak Vyas, Chaitanya Langde, et al.</p>
+              <p class="pub-venue">arXiv preprint arXiv:2408.06113</p>
+              <div class="link-row">
+                <a class="link-pill" href="https://arxiv.org/pdf/2408.06113" target="_blank" rel="noopener">PDF</a>
+                <a class="link-pill" href="https://arxiv.org/abs/2408.06113" target="_blank" rel="noopener">arXiv</a>
+              </div>
+            </div>
+          </li>
+          <li class="pub reveal">
+            <span class="pub-year">2024</span>
+            <div class="pub-main">
+              <h3>Electron Beam Melting of Inconel 718, 738 and 625 Alloys for Aerospace Applications: A Review of Microstructure and Mechanical Properties</h3>
+              <p class="authors"><strong>Yash Rampuria</strong>, et al.</p>
+              <p class="pub-venue">COPEN-13: 13th International Conference on Precision, Micro, Meso and Nano Engineering</p>
+              <div class="link-row">
+                <a class="link-pill" href="https://drive.google.com/file/d/10mgR9KWwBtWkttJa_npoCWplC7xEwN2T/view?usp=sharing" target="_blank" rel="noopener">PDF</a>
+              </div>
+            </div>
+          </li>
+        </ol>
+        <p class="pubs-more reveal"><a href="https://scholar.google.com/citations?user=dksJWnEAAAAJ&amp;hl=en" target="_blank" rel="noopener">See Google Scholar &rarr;</a></p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker">Toolkit</p>
+          <h2 class="section-title">Skills</h2>
+        </header>
+        <div class="skills-grid">
+          <div class="skill-group reveal">
+            <h3>Robot learning</h3>
+            <ul class="chip-row">
+              <li>Reinforcement learning (PPO, SAC)</li><li>Imitation learning (BC, DAgger)</li><li>Graph neural networks</li><li>Foundation models / VLMs</li><li>Sim-to-real</li>
+            </ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Perception &amp; vision</h3>
+            <ul class="chip-row">
+              <li>Object detection (YOLO)</li><li>Multi-object tracking</li><li>Depth estimation</li><li>Pose estimation</li><li>Domain adaptation</li><li>3D Gaussian Splatting</li>
+            </ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Estimation &amp; planning</h3>
+            <ul class="chip-row">
+              <li>SLAM &amp; ICP</li><li>Kalman / IMM filters</li><li>LiDAR&ndash;camera&ndash;IMU fusion</li><li>Navigation graphs</li><li>Frontier exploration</li><li>RRT / Voronoi</li><li>MPC &amp; PID</li>
+            </ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Software</h3>
+            <ul class="chip-row">
+              <li>Python</li><li>C++</li><li>CUDA</li><li>PyTorch</li><li>TensorRT</li><li>ROS / ROS 2</li><li>Isaac Sim</li><li>CARLA</li><li>OpenCV</li><li>Open3D</li><li>AWS</li><li>Java</li><li>MATLAB / Simulink</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Background -->
+    <section id="background" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker">Background</p>
+          <h2 class="section-title">Education &amp; honors</h2>
+        </header>
+
+        <div class="edu-grid">
+          <article class="edu-card reveal">
+            <div class="edu-top">
+              <span class="edu-mark edu-stanford" aria-hidden="true">S</span>
+              <span class="edu-date">2025 &ndash; 2027</span>
+            </div>
+            <h3>Stanford University</h3>
+            <p class="edu-degree">MS, Aeronautics &amp; Astronautics (Robotics focus)</p>
+            <p class="edu-score"><b>4.0</b> GPA</p>
+          </article>
+          <article class="edu-card reveal">
+            <div class="edu-top">
+              <span class="edu-mark edu-iitb" aria-hidden="true">B</span>
+              <span class="edu-date">2021 &ndash; 2025</span>
+            </div>
+            <h3>Indian Institute of Technology Bombay</h3>
+            <p class="edu-degree">B.Tech (Honors), Mechanical Engineering</p>
+            <p class="edu-score"><b>9.63</b>/10 GPA &middot; Ranked <b>4th</b> of 190+</p>
+          </article>
+        </div>
+
+        <div class="honors reveal">
+          <p class="mini-label">Honors &amp; awards</p>
+          <ul class="honor-list">
+            <li><b>Person of the Year (Technical)</b>, IIT Bombay: the highest institute-wide honor, among 14,000+ students</li>
+            <li><b>4th overall, 3rd in Business Plan</b> at Formula Student AI 2025, UK, and the only Asian team to complete 10 laps</li>
+            <li><b>Top 5</b> in Simulation Development and Business Plan at Formula Student AI 2024</li>
+            <li><b>3rd prize, Real World AI</b> at Formula Student AI 2023, for a global AV-sector analysis</li>
+            <li><b>Jaguar Land Rover</b> cash prize for self-driving R&amp;D in electric race cars</li>
+            <li><b>National winner</b>, Indian Case Competition (5,500+ participants), with an ADAS startup pitch</li>
+            <li><b>1st prize</b>, AI-IoT Hackathon at the Indo-Japan Industry Summit</li>
+            <li><b>Full-time offers</b> from Honda R&amp;D and Amazon after internships</li>
+            <li><b>AIR 898</b> in JEE Main (99.93 percentile) and <b>AIR 1096</b> in JEE Advanced (99.27 percentile)</li>
+            <li><b>AP grades</b> (top 1% of the batch) in Guidance &amp; Control of UAVs, Microprocessors &amp; Automatic Controls Lab, and Fluid Mechanics Lab</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+      <div class="container contact-inner reveal">
+        <p class="kicker kicker-center">Contact</p>
+        <h2 class="contact-title">Let's build robots that <em>see, map and learn.</em></h2>
+        <p class="contact-lead">I'm always happy to talk about robot learning, perception and autonomy, whether it's research, roles or a hard problem you're stuck on.</p>
+        <a class="btn btn-primary btn-lg" href="mailto:yashr@stanford.edu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          yashr@stanford.edu
+        </a>
+        <ul class="contact-links">
+          <li><a href="https://www.linkedin.com/in/yash-rampuria-5ba350226/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://scholar.google.com/citations?user=dksJWnEAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
+          <li><a href="https://github.com/yash-rampuria" target="_blank" rel="noopener">GitHub</a></li>
+          <li data-resume><a href="Yash_Rampuria_Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> Yash Rampuria &middot; Stanford, CA</p>
+      <a href="#top" class="to-top">Back to top &uarr;</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
