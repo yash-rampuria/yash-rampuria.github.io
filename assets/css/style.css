@@ -659,9 +659,9 @@ em { font-style: italic; }
 .gallery {
   margin-top: 22px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* Column widths follow the two paired figures' aspect ratios so they render at equal height. */
+  grid-template-columns: 1.777fr 2.532fr;
   gap: 14px;
-  align-items: start;
 }
 .gallery-item {
   border-radius: var(--radius);
@@ -672,12 +672,9 @@ em { font-style: italic; }
 .gallery-item img {
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
   background: var(--figure-bg);
 }
 .gallery-wide { grid-column: 1 / -1; }
-.gallery-wide img { aspect-ratio: auto; object-fit: contain; }
 .gallery-item figcaption {
   padding: 12px 16px 14px;
   font-size: 0.82rem;
