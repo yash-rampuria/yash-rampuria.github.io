@@ -3,26 +3,27 @@
    ========================================================== */
 
 :root {
-  --bg: #f6f4ef;
-  --bg-soft: #efece5;
+  /* Stanford Cardinal on white */
+  --bg: #ffffff;
+  --bg-soft: #f6f6f7;
   --surface: #ffffff;
-  --surface-2: #fbfaf7;
-  --ink: #15171b;
+  --surface-2: #fafafa;
+  --ink: #16181d;
   --ink-2: #464b53;
-  --muted: #868b93;
-  --line: #e3dfd6;
-  --line-strong: #cdc8bc;
+  --muted: #6b7079;
+  --line: #e7e7ea;
+  --line-strong: #d2d2d7;
   --accent: #8c1515;
-  --accent-hover: #6f1010;
+  --accent-hover: #820000;
   --accent-ink: #ffffff;
-  --accent-soft: rgba(140, 21, 21, 0.07);
-  --accent-line: rgba(140, 21, 21, 0.22);
+  --accent-soft: rgba(140, 21, 21, 0.06);
+  --accent-line: rgba(140, 21, 21, 0.25);
   --gold: #c58a12;
   --figure-bg: #ffffff;
-  --shadow-sm: 0 1px 2px rgba(20, 18, 12, 0.05), 0 1px 3px rgba(20, 18, 12, 0.04);
-  --shadow-md: 0 10px 30px -12px rgba(20, 18, 12, 0.18), 0 2px 6px rgba(20, 18, 12, 0.04);
-  --shadow-lg: 0 30px 60px -24px rgba(20, 18, 12, 0.28);
-  --nav-bg: rgba(246, 244, 239, 0.78);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 10px 30px -12px rgba(0, 0, 0, 0.16), 0 2px 6px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 30px 60px -24px rgba(0, 0, 0, 0.24);
+  --nav-bg: rgba(255, 255, 255, 0.88);
 
   --sans: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -30,30 +31,7 @@
   --maxw: 1160px;
   --radius: 16px;
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-
-[data-theme='dark'] {
-  --bg: #0f1114;
-  --bg-soft: #14171b;
-  --surface: #171a1f;
-  --surface-2: #1b1f25;
-  --ink: #ecebe6;
-  --ink-2: #b2b5bb;
-  --muted: #7d828a;
-  --line: #262a31;
-  --line-strong: #343941;
-  --accent: #e2575c;
-  --accent-hover: #f0767a;
-  --accent-ink: #160a0a;
-  --accent-soft: rgba(226, 87, 92, 0.1);
-  --accent-line: rgba(226, 87, 92, 0.3);
-  --gold: #f1b742;
-  --figure-bg: #f3f1ec;
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 12px 32px -14px rgba(0, 0, 0, 0.6);
-  --shadow-lg: 0 30px 60px -24px rgba(0, 0, 0, 0.7);
-  --nav-bg: rgba(15, 17, 20, 0.78);
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 /* ---------- Base ---------- */
@@ -73,7 +51,6 @@ body {
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  transition: background-color 0.3s var(--ease), color 0.3s var(--ease);
 }
 
 [hidden] { display: none !important; }
@@ -194,9 +171,6 @@ em { font-style: italic; }
 .icon-btn:hover { color: var(--accent); border-color: var(--accent-line); }
 .icon-btn svg { width: 18px; height: 18px; }
 
-.theme-toggle .icon-moon { display: none; }
-[data-theme='dark'] .theme-toggle .icon-sun { display: none; }
-[data-theme='dark'] .theme-toggle .icon-moon { display: block; }
 
 .nav-toggle { display: none; gap: 5px; }
 .nav-toggle span {
@@ -563,7 +537,6 @@ em { font-style: italic; }
   padding: 108px 0;
   border-top: 1px solid var(--line);
 }
-#projects, #publications, #background { background: var(--bg-soft); }
 
 .section-head { max-width: 780px; margin-bottom: 52px; }
 .section-title {
@@ -681,8 +654,6 @@ em { font-style: italic; }
   color: var(--ink-2);
   border-top: 1px solid var(--line);
 }
-[data-theme='dark'] .gallery-item img,
-[data-theme='dark'] .case-media:not(.case-media-dark) img { filter: brightness(0.93); }
 
 .interests { margin-top: 44px; }
 
@@ -733,7 +704,7 @@ em { font-style: italic; }
   margin-top: 16px;
   padding: 12px 16px;
   border-left: 2px solid var(--accent);
-  background: var(--surface);
+  background: var(--bg-soft);
   border-radius: 0 10px 10px 0;
   font-size: 0.89rem;
   color: var(--ink-2);

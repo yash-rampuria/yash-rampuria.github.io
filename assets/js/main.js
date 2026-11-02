@@ -37,15 +37,6 @@
     if (e.key === 'Escape') setMenu(false);
   });
 
-  /* ---------- Theme toggle ---------- */
-  var themeBtn = document.querySelector('.theme-toggle');
-  themeBtn.addEventListener('click', function () {
-    var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    localStorage.setItem('theme', next);
-    window.dispatchEvent(new Event('themechange'));
-  });
-
   /* ---------- Active section in nav ---------- */
   var navAnchors = Array.prototype.slice.call(links.querySelectorAll('a'));
   var sections = navAnchors
@@ -120,8 +111,7 @@
       line: v('--line'),
       lineStrong: v('--line-strong'),
       accent: v('--accent'),
-      gold: v('--gold'),
-      soft: v('--bg-soft')
+      gold: v('--gold')
     };
   }
 
@@ -501,11 +491,6 @@
         stop(); resize(); start();
       }
     }, 150);
-  });
-
-  window.addEventListener('themechange', function () {
-    readColors();
-    if (!running && world) draw(world, performance.now());
   });
 
   document.addEventListener('visibilitychange', function () {
