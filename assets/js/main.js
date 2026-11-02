@@ -84,7 +84,8 @@
      Hero: a robot builds a navigation graph while exploring.
      Nodes are sampled in free space, revealed by a range
      sensor with line of sight, and the robot repeatedly
-     plans (Dijkstra) to the nearest frontier node.
+     plans (Dijkstra) to the best frontier: the one with the
+     most unseen space per unit of travel cost.
      ====================================================== */
   var canvas = document.getElementById('graph-canvas');
   if (!canvas || !canvas.getContext) return;
@@ -229,6 +230,7 @@
       nodes: kept,
       robot: { x: startNode.x, y: startNode.y, node: remap[startIdx] },
       path: [],
+      target: -1,
       trail: [{ x: startNode.x, y: startNode.y }],
       sensor: s * 2.5,
       speed: s * 2.3,
@@ -260,26 +262,32 @@
     }
   }
 
-  // Dijkstra over the observed subgraph to the nearest frontier node.
+  // Expected information gain of a frontier: unseen samples within sensor range.
+  function frontierGain(w, k) {
+    var f = w.nodes[k], R2 = w.sensor * w.sensor, gain = 0;
+    for (var i = 0; i < w.nodes.length; i++) {
+      var n = w.nodes[i];
+      if (n.seen) continue;
+      var dx = n.x - f.x, dy = n.y - f.y;
+      if (dx * dx + dy * dy <= R2) gain++;
+    }
+    return gain;
+  }
+
+  // Dijkstra over the observed subgraph, then pick the best frontier:
+  // the one with the highest information gain per unit of travel cost.
   function planToFrontier(w) {
     var N = w.nodes.length;
     var dist = new Array(N).fill(Infinity);
     var prev = new Array(N).fill(-1);
     var done = new Array(N).fill(false);
-    var isFrontier = {};
-    w.frontier.forEach(function (k) { isFrontier[k] = true; });
     dist[w.robot.node] = 0;
     for (;;) {
       var u = -1, bd = Infinity;
       for (var i = 0; i < N; i++) {
         if (!done[i] && dist[i] < bd && w.nodes[i].seen) { bd = dist[i]; u = i; }
       }
-      if (u === -1) return [];
-      if (isFrontier[u] && u !== w.robot.node) {
-        var path = [];
-        for (var v = u; v !== w.robot.node; v = prev[v]) path.unshift(v);
-        return path;
-      }
+      if (u === -1) break;
       done[u] = true;
       w.nodes[u].adj.forEach(function (e) {
         if (!w.nodes[e.to].seen) return;
@@ -287,6 +295,22 @@
         if (nd < dist[e.to]) { dist[e.to] = nd; prev[e.to] = u; }
       });
     }
+
+    var best = -1, bestScore = -Infinity, currentScore = -Infinity;
+    w.frontier.forEach(function (k) {
+      if (k === w.robot.node || dist[k] === Infinity) return;
+      var score = frontierGain(w, k) / (dist[k] + w.s);
+      if (k === w.target) currentScore = score;
+      if (score > bestScore) { bestScore = score; best = k; }
+    });
+    // Hysteresis: keep the current goal unless another frontier is clearly better.
+    if (currentScore > 0 && currentScore >= 0.8 * bestScore) best = w.target;
+    if (best === -1) { w.target = -1; return []; }
+
+    w.target = best;
+    var path = [];
+    for (var v = best; v !== w.robot.node; v = prev[v]) path.unshift(v);
+    return path;
   }
 
   function step(w, dt, now) {
