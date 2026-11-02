@@ -546,6 +546,16 @@ em { font-style: italic; }
   color: var(--ink);
 }
 .stat-value small { font-size: 0.6em; font-weight: 700; color: var(--accent); margin-left: 3px; letter-spacing: 0; }
+/* Text-only stat, bottom-aligned with the numeric stats beside it */
+.stat-value.stat-text {
+  display: flex;
+  align-items: flex-end;
+  min-height: calc(2.1rem * 1.1);
+  font-size: 1.35rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+}
 .stat-label { font-size: 0.84rem; color: var(--muted); line-height: 1.45; }
 
 /* ---------- Sections ---------- */
